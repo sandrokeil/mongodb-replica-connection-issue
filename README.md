@@ -5,7 +5,8 @@ I can reproduce the error with this setup. You find the logs of a test run in [l
 
 Also take a look at the [`php.txt`](php.txt). The test has finished at `Do 2. Mär 12:06:53 CET 2017` and now look at the 
 last lines of `php.txt` from `02-Mar-2017 11:08:49`. There are multiple success requests and the sometimes the `not master` 
-error occurs. The `index.php` writes and reads from MongoDB.
+error occurs. The `index.php` writes and reads from MongoDB. Simply reload the page multiple times after the test has finished.
+There error still exists.
 
 Why are some requests are successfully and some failed? I guess it's a PHP-FPM static child caching (or even opcache) issue.
 
