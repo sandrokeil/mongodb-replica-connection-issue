@@ -1,0 +1,64 @@
+version: '2'
+services:
+  nginx:
+    image: prooph/nginx:www
+    ports:
+      - 8080:80
+      - 443:443
+
+  php:
+    build: ./env/docker/php
+    volumes:
+      - .:/var/www
+
+  mongodb0:
+    build: ./env/docker/mongo
+    command: ['mongod', '--config', '/etc/mongod.conf']
+    ports:
+      - "27017:27017"
+    hostname: node0.mongodb.local
+    volumes:
+      - data-mongodb0:/data/db
+    networks:
+      default:
+        aliases:
+          - node0.mongodb.local
+
+  mongodb1:
+    build: ./env/docker/mongo
+    command: ['mongod', '--config', '/etc/mongod.conf']
+    ports:
+      - "27018:27017"
+    hostname: node1.mongodb.local
+    volumes:
+      - data-mongodb1:/data/db
+    networks:
+      default:
+        aliases:
+          - node1.mongodb.local
+
+  mongodb2:
+    build: ./env/docker/mongo
+    command: ['mongod', '--config', '/etc/mongod.conf']
+    ports:
+      - "27019:27017"
+    hostname: node2.mongodb.local
+    volumes:
+      - data-mongodb2:/data/db
+    networks:
+      default:
+        aliases:
+          - node2.mongodb.local
+
+#
+# [ volumes definition ]
+#
+# creates Docker volumes which can be mounted by other containers too e.g. for backup
+#
+volumes:
+  data-mongodb0:
+    driver: local
+  data-mongodb1:
+    driver: local
+  data-mongodb2:
+    driver: local

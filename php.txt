@@ -1,0 +1,310 @@
+Attaching to mongodbreplicaissue_php_1
+[36mphp_1       |[0m [02-Mar-2017 11:00:03] NOTICE: fpm is running, pid 1
+[36mphp_1       |[0m [02-Mar-2017 11:00:03] NOTICE: ready to handle connections
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:00:31 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:00:31 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:00:36 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:00:36 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:01:38 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:01:38 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:02:41 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:02:41 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:02:41 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:02:41 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:03:43 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:03:43 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:03:43] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [Server closed connection. calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:03:43] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:03:43] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:03:43] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:03:43] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [Server closed connection. calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:03:43] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:03:43] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:03:43] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:04:45 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:04:45] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [Server closed connection. calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:04:45] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:04:45] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:04:45] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:04:45] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [Server closed connection. calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:04:45] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:04:45] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:04:45 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:04:45] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:04:45 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:04:45 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:04:46] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [Server closed connection. calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:04:46] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:04:46] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:04:46] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:04:46] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [Server closed connection. calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:04:46] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:04:46] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:04:46] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:05:49 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:05:49] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [Server closed connection. calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:05:49] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:05:49] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:05:49] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:05:49] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [Server closed connection. calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:05:49] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:05:49 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:05:49] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:05:49] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:06:51] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:06:51 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:06:51] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(513): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:06:51] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:06:51] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:06:51 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:06:51] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:06:51] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(513): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:06:51] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:06:51] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:06:53 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:06:53] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:06:53] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(513): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:06:53] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:06:53] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:06:53] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:06:53 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:06:53] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(513): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:06:53] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:06:53] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:06:53 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(513): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:06:53 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(513): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:06:54 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(513): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:06:54 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(513): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:06:54] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:19 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:19] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:19] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:19] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:19] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:21 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:21] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:21] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:21] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:21] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:21 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:21] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:21] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:21] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:21] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:22 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:22] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:22] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:22] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:22] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:23 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:23] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:23] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:23] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:23] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:08:26] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:26 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:26] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:26] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:26] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:08:27] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:27 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:27] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:27] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:27] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:28 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:29 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:31 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:32 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:32] WARNING: [pool www] child 7 said into stderr: "Failed to send "find" command with database "testing": socket error or timeout"
+[36mphp_1       |[0m [02-Mar-2017 11:08:32] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/Find.php(219): MongoDB\Driver\Server->executeQuery('testing.write_t...', Object(MongoDB\Driver\Query), Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:32] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(525): MongoDB\Operation\Find->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:32] WARNING: [pool www] child 7 said into stderr: "#2 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:08:32] WARNING: [pool www] child 7 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:33 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:34 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:35 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:35 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:36 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:36 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:37 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:37] WARNING: [pool www] child 8 said into stderr: "Failed to send "insert" command with database "testing": socket error or timeout"
+[36mphp_1       |[0m [02-Mar-2017 11:08:37] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/InsertOne.php(103): MongoDB\Driver\Server->executeBulkWrite('testing.write_t...', Object(MongoDB\Driver\BulkWrite), Object(MongoDB\Driver\WriteConcern))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:37] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(751): MongoDB\Operation\InsertOne->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:37] WARNING: [pool www] child 8 said into stderr: "#2 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:37] WARNING: [pool www] child 8 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:38 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 7 said into stderr: "Failed to send "insert" command with database "testing": socket error or timeout"
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/InsertOne.php(103): MongoDB\Driver\Server->executeBulkWrite('testing.write_t...', Object(MongoDB\Driver\BulkWrite), Object(MongoDB\Driver\WriteConcern))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(751): MongoDB\Operation\InsertOne->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 7 said into stderr: "#2 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 7 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:38 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 8 said into stderr: "not master"
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/InsertOne.php(103): MongoDB\Driver\Server->executeBulkWrite('testing.write_t...', Object(MongoDB\Driver\BulkWrite), Object(MongoDB\Driver\WriteConcern))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(751): MongoDB\Operation\InsertOne->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 8 said into stderr: "#2 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:38] WARNING: [pool www] child 8 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:39 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:39] WARNING: [pool www] child 7 said into stderr: "not master"
+[36mphp_1       |[0m [02-Mar-2017 11:08:39] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/InsertOne.php(103): MongoDB\Driver\Server->executeBulkWrite('testing.write_t...', Object(MongoDB\Driver\BulkWrite), Object(MongoDB\Driver\WriteConcern))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:39] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(751): MongoDB\Operation\InsertOne->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:39] WARNING: [pool www] child 7 said into stderr: "#2 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:39] WARNING: [pool www] child 7 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:39 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:39] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:39] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:39] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:39] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:40 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:40] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:40] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:40] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:40] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:40 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:40] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:40] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:40] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:40] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:41 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:41] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:41] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:41] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:41] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:41 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:41] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:41] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:41] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:41] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:42 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:42] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:42] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:42] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:42] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:42 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:42] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:42] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:42] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:42] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:43 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:43] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:43] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:43] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:43] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:43 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:43] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:43] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:43] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:43] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:44 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:44] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:44] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:44] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:44] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:08:44] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:44 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:44] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:44] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:44] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:08:45] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:45 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:45] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:45] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:45] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:45 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:45] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:45] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:45] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:45] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:46 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:46] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:46] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:46] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:46] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m [02-Mar-2017 11:08:46] WARNING: [pool www] child 8 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:46 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:46] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:46] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:46] WARNING: [pool www] child 8 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:47 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:47] WARNING: [pool www] child 7 said into stderr: "No suitable servers found (`serverSelectionTryOnce` set): [connection closed calling ismaster on 'node0.mongodb.local:27017'] [connection closed calling ismaster on 'node1.mongodb.local:27017'] [connection closed calling ismaster on 'node2.mongodb.local:27017']"
+[36mphp_1       |[0m [02-Mar-2017 11:08:47] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Collection.php(749): MongoDB\Driver\Manager->selectServer(Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:47] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:47] WARNING: [pool www] child 7 said into stderr: "#2 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:47 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:48 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:49 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:49] WARNING: [pool www] child 8 said into stderr: "Failed to send "find" command with database "testing": socket error or timeout"
+[36mphp_1       |[0m [02-Mar-2017 11:08:49] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/Find.php(219): MongoDB\Driver\Server->executeQuery('testing.write_t...', Object(MongoDB\Driver\Query), Object(MongoDB\Driver\ReadPreference))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:49] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(525): MongoDB\Operation\Find->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:49] WARNING: [pool www] child 8 said into stderr: "#2 /var/www/public/index.php(29): MongoDB\Collection->find()"
+[36mphp_1       |[0m [02-Mar-2017 11:08:49] WARNING: [pool www] child 8 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:49 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:50 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:50 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:51 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:51 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:51 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:52 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:52 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:53 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:53 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:54 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:54 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:54 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:55 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:55 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:55 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:56 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:56 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:57 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 7 said into stderr: "Failed to send "insert" command with database "testing": socket error or timeout"
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/InsertOne.php(103): MongoDB\Driver\Server->executeBulkWrite('testing.write_t...', Object(MongoDB\Driver\BulkWrite), Object(MongoDB\Driver\WriteConcern))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(751): MongoDB\Operation\InsertOne->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 7 said into stderr: "#2 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 7 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:57 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 8 said into stderr: "Failed to send "insert" command with database "testing": socket error or timeout"
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/InsertOne.php(103): MongoDB\Driver\Server->executeBulkWrite('testing.write_t...', Object(MongoDB\Driver\BulkWrite), Object(MongoDB\Driver\WriteConcern))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(751): MongoDB\Operation\InsertOne->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 8 said into stderr: "#2 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:57] WARNING: [pool www] child 8 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:58 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 7 said into stderr: "not master"
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 7 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/InsertOne.php(103): MongoDB\Driver\Server->executeBulkWrite('testing.write_t...', Object(MongoDB\Driver\BulkWrite), Object(MongoDB\Driver\WriteConcern))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 7 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(751): MongoDB\Operation\InsertOne->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 7 said into stderr: "#2 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 7 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:58 +0000 "GET /index.php" 200
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 8 said into stderr: "not master"
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 8 said into stderr: "#0 /var/www/vendor/mongodb/mongodb/src/Operation/InsertOne.php(103): MongoDB\Driver\Server->executeBulkWrite('testing.write_t...', Object(MongoDB\Driver\BulkWrite), Object(MongoDB\Driver\WriteConcern))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 8 said into stderr: "#1 /var/www/vendor/mongodb/mongodb/src/Collection.php(751): MongoDB\Operation\InsertOne->execute(Object(MongoDB\Driver\Server))"
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 8 said into stderr: "#2 /var/www/public/index.php(25): MongoDB\Collection->insertOne(Array)"
+[36mphp_1       |[0m [02-Mar-2017 11:08:58] WARNING: [pool www] child 8 said into stderr: "#3 {main}"
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:08:59 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:00 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:00 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:00 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:01 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:01 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:02 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:02 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:02 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:03 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:03 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:03 +0000 "GET /index.php" 200
+[36mphp_1       |[0m 172.18.0.2 -  02/Mar/2017:11:09:04 +0000 "GET /index.php" 200
