@@ -74,3 +74,15 @@ docker-compose exec mongodb2 sh status.sh
 query
 query
 query
+
+AFTER_IDLE_TIME=900
+
+echo "${GREEN}Starting after test queries every 5s.${RESET}"
+
+until [ $AFTER_IDLE_TIME -lt 1 ]; do
+    date
+    let AFTER_IDLE_TIME-=5
+    printf "${AFTER_IDLE_TIME} "
+    query
+    sleep 5
+done
