@@ -1,41 +1,55 @@
-             Name                           Command               State                     Ports                    
---------------------------------------------------------------------------------------------------------------------
-mongodbreplicaissue_mongodb0_1   /entrypoint.sh mongod --co ...   Up      0.0.0.0:27017->27017/tcp                   
-mongodbreplicaissue_mongodb1_1   /entrypoint.sh mongod --co ...   Up      0.0.0.0:27018->27017/tcp                   
-mongodbreplicaissue_mongodb2_1   /entrypoint.sh mongod --co ...   Up      0.0.0.0:27019->27017/tcp                   
-mongodbreplicaissue_nginx_1      nginx -g daemon off;             Up      0.0.0.0:443->443/tcp, 0.0.0.0:8080->80/tcp 
-mongodbreplicaissue_php_1        docker-php-entrypoint php-fpm    Up      9000/tcp                                   
+             Name                           Command               State               Ports            
+-------------------------------------------------------------------------------------------------------
+mongodbreplicaissue_mongodb0_1   docker-entrypoint.sh mongo ...   Up      0.0.0.0:27017->27017/tcp     
+mongodbreplicaissue_mongodb1_1   docker-entrypoint.sh mongo ...   Up      0.0.0.0:27018->27017/tcp     
+mongodbreplicaissue_mongodb2_1   docker-entrypoint.sh mongo ...   Up      0.0.0.0:27019->27017/tcp     
+mongodbreplicaissue_nginx_1      nginx -g daemon off;             Up      443/tcp, 0.0.0.0:8080->80/tcp
+mongodbreplicaissue_php_1        docker-php-entrypoint php-fpm    Up      9000/tcp                     
 [32mInitialize cluster in T-5s(B[m
-Do 2. Mär 12:00:05 CET 2017
+Do 22. Mär 08:30:11 CET 2018
 4 3 2 1 0 
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
-{ "ok" : 1 }
+MongoDB server version: 3.6.3
+{
+	"ok" : 1,
+	"operationTime" : Timestamp(1521703818, 1),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521703818, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
+}
 bye
 [32mTest starts in T-20s(B[m
-Do 2. Mär 12:00:10 CET 2017
+Do 22. Mär 08:30:18 CET 2018
 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:00:31.443Z"),
+	"date" : ISODate("2018-03-22T07:30:40.773Z"),
 	"myState" : 1,
 	"term" : NumberLong(1),
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452422, 1),
+			"ts" : Timestamp(1521703835, 1),
+			"t" : NumberLong(1)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521703835, 1),
 			"t" : NumberLong(1)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452422, 1),
+			"ts" : Timestamp(1521703835, 1),
 			"t" : NumberLong(1)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452422, 1),
+			"ts" : Timestamp(1521703835, 1),
 			"t" : NumberLong(1)
 		}
 	},
@@ -46,15 +60,15 @@ MongoDB server version: 3.4.2
 			"health" : 1,
 			"state" : 1,
 			"stateStr" : "PRIMARY",
-			"uptime" : 28,
+			"uptime" : 32,
 			"optime" : {
-				"ts" : Timestamp(1488452422, 1),
+				"ts" : Timestamp(1521703835, 1),
 				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:00:22Z"),
+			"optimeDate" : ISODate("2018-03-22T07:30:35Z"),
 			"infoMessage" : "could not find member to sync from",
-			"electionTime" : Timestamp(1488452421, 1),
-			"electionDate" : ISODate("2017-03-02T11:00:21Z"),
+			"electionTime" : Timestamp(1521703829, 1),
+			"electionDate" : ISODate("2018-03-22T07:30:29Z"),
 			"configVersion" : 1,
 			"self" : true
 		},
@@ -64,19 +78,19 @@ MongoDB server version: 3.4.2
 			"health" : 1,
 			"state" : 2,
 			"stateStr" : "SECONDARY",
-			"uptime" : 20,
+			"uptime" : 22,
 			"optime" : {
-				"ts" : Timestamp(1488452422, 1),
+				"ts" : Timestamp(1521703835, 1),
 				"t" : NumberLong(1)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(1488452422, 1),
+				"ts" : Timestamp(1521703835, 1),
 				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:00:22Z"),
-			"optimeDurableDate" : ISODate("2017-03-02T11:00:22Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:00:29.923Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:00:29.867Z"),
+			"optimeDate" : ISODate("2018-03-22T07:30:35Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:30:35Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:30:39.617Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:30:40.691Z"),
 			"pingMs" : NumberLong(0),
 			"syncingTo" : "node0.mongodb.local:27017",
 			"configVersion" : 1
@@ -87,60 +101,72 @@ MongoDB server version: 3.4.2
 			"health" : 1,
 			"state" : 2,
 			"stateStr" : "SECONDARY",
-			"uptime" : 20,
+			"uptime" : 22,
 			"optime" : {
-				"ts" : Timestamp(1488452422, 1),
+				"ts" : Timestamp(1521703835, 1),
 				"t" : NumberLong(1)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(1488452422, 1),
+				"ts" : Timestamp(1521703835, 1),
 				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:00:22Z"),
-			"optimeDurableDate" : ISODate("2017-03-02T11:00:22Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:00:29.923Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:00:29.879Z"),
+			"optimeDate" : ISODate("2018-03-22T07:30:35Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:30:35Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:30:39.616Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:30:40.689Z"),
 			"pingMs" : NumberLong(0),
 			"syncingTo" : "node0.mongodb.local:27017",
 			"configVersion" : 1
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521703835, 1),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521703835, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
 [32mTesting ...(B[m
-Do 2. Mär 12:00:31 CET 2017
+Do 22. Mär 08:30:40 CET 2018
 [32mQuerying(B[m
-trueInsert successful: 0Count: trueInsert successful: 0Count: Do 2. Mär 12:00:31 CET 2017
+trueInsert successful: 2Count: trueInsert successful: 2Count: Do 22. Mär 08:30:40 CET 2018
 4 3 2 1 0 
-Do 2. Mär 12:00:36 CET 2017
-Do 2. Mär 12:00:36 CET 2017
+Do 22. Mär 08:30:45 CET 2018
+Do 22. Mär 08:30:45 CET 2018
 [32mQuerying(B[m
 trueInsert successful: 4Count: trueInsert successful: 4Count: [32mRemove node 2 (B[m
 Going to remove mongodbreplicaissue_mongodb2_1
-Do 2. Mär 12:00:38 CET 2017
+Do 22. Mär 08:30:50 CET 2018
 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:01:38.934Z"),
+	"date" : ISODate("2018-03-22T07:31:52.284Z"),
 	"myState" : 2,
 	"term" : NumberLong(1),
 	"syncingTo" : "node0.mongodb.local:27017",
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452492, 1),
+			"ts" : Timestamp(1521703911, 1),
+			"t" : NumberLong(1)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521703911, 1),
 			"t" : NumberLong(1)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452492, 1),
+			"ts" : Timestamp(1521703911, 1),
 			"t" : NumberLong(1)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452492, 1),
+			"ts" : Timestamp(1521703911, 1),
 			"t" : NumberLong(1)
 		}
 	},
@@ -151,22 +177,22 @@ MongoDB server version: 3.4.2
 			"health" : 1,
 			"state" : 1,
 			"stateStr" : "PRIMARY",
-			"uptime" : 86,
+			"uptime" : 91,
 			"optime" : {
-				"ts" : Timestamp(1488452492, 1),
+				"ts" : Timestamp(1521703901, 1),
 				"t" : NumberLong(1)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(1488452492, 1),
+				"ts" : Timestamp(1521703901, 1),
 				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:01:32Z"),
-			"optimeDurableDate" : ISODate("2017-03-02T11:01:32Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:01:37.895Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:01:37.951Z"),
+			"optimeDate" : ISODate("2018-03-22T07:31:41Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:31:41Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:31:50.732Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:31:51.658Z"),
 			"pingMs" : NumberLong(0),
-			"electionTime" : Timestamp(1488452421, 1),
-			"electionDate" : ISODate("2017-03-02T11:00:21Z"),
+			"electionTime" : Timestamp(1521703829, 1),
+			"electionDate" : ISODate("2018-03-22T07:30:29Z"),
 			"configVersion" : 1
 		},
 		{
@@ -175,12 +201,12 @@ MongoDB server version: 3.4.2
 			"health" : 1,
 			"state" : 2,
 			"stateStr" : "SECONDARY",
-			"uptime" : 94,
+			"uptime" : 103,
 			"optime" : {
-				"ts" : Timestamp(1488452492, 1),
+				"ts" : Timestamp(1521703911, 1),
 				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:01:32Z"),
+			"optimeDate" : ISODate("2018-03-22T07:31:51Z"),
 			"syncingTo" : "node0.mongodb.local:27017",
 			"configVersion" : 1,
 			"self" : true
@@ -202,42 +228,54 @@ MongoDB server version: 3.4.2
 			},
 			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
 			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:01:38.008Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:00:35.880Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:31:51.042Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:30:46.693Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 1",
+			"lastHeartbeatMessage" : "HostUnreachable",
 			"configVersion" : -1
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521703911, 1),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521703911, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
-Do 2. Mär 12:01:38 CET 2017
+Do 22. Mär 08:31:52 CET 2018
 [32mQuerying(B[m
-trueInsert successful: 5Count: trueInsert successful: 5Count: [32mAdd node 2 (B[m
-Do 2. Mär 12:01:40 CET 2017
+trueInsert successful: 22Count: trueInsert successful: 22Count: [32mAdd node 2 (B[m
+Do 22. Mär 08:32:03 CET 2018
 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:02:41.157Z"),
+	"date" : ISODate("2018-03-22T07:33:05.102Z"),
 	"myState" : 2,
 	"term" : NumberLong(1),
 	"syncingTo" : "node0.mongodb.local:27017",
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452552, 1),
+			"ts" : Timestamp(1521703984, 1),
+			"t" : NumberLong(1)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521703984, 1),
 			"t" : NumberLong(1)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452552, 1),
+			"ts" : Timestamp(1521703984, 1),
 			"t" : NumberLong(1)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452552, 1),
+			"ts" : Timestamp(1521703984, 1),
 			"t" : NumberLong(1)
 		}
 	},
@@ -248,22 +286,22 @@ MongoDB server version: 3.4.2
 			"health" : 1,
 			"state" : 1,
 			"stateStr" : "PRIMARY",
-			"uptime" : 148,
+			"uptime" : 164,
 			"optime" : {
-				"ts" : Timestamp(1488452552, 1),
+				"ts" : Timestamp(1521703982, 2),
 				"t" : NumberLong(1)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(1488452552, 1),
+				"ts" : Timestamp(1521703982, 2),
 				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:02:32Z"),
-			"optimeDurableDate" : ISODate("2017-03-02T11:02:32Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:02:39.924Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:02:39.980Z"),
+			"optimeDate" : ISODate("2018-03-22T07:33:02Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:33:02Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:33:04.773Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:33:03.697Z"),
 			"pingMs" : NumberLong(0),
-			"electionTime" : Timestamp(1488452421, 1),
-			"electionDate" : ISODate("2017-03-02T11:00:21Z"),
+			"electionTime" : Timestamp(1521703829, 1),
+			"electionDate" : ISODate("2018-03-22T07:30:29Z"),
 			"configVersion" : 1
 		},
 		{
@@ -272,12 +310,12 @@ MongoDB server version: 3.4.2
 			"health" : 1,
 			"state" : 2,
 			"stateStr" : "SECONDARY",
-			"uptime" : 157,
+			"uptime" : 176,
 			"optime" : {
-				"ts" : Timestamp(1488452552, 1),
+				"ts" : Timestamp(1521703984, 1),
 				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:02:32Z"),
+			"optimeDate" : ISODate("2018-03-22T07:33:04Z"),
 			"syncingTo" : "node0.mongodb.local:27017",
 			"configVersion" : 1,
 			"self" : true
@@ -285,59 +323,71 @@ MongoDB server version: 3.4.2
 		{
 			"_id" : 2,
 			"name" : "node2.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 60,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521703982, 2),
+				"t" : NumberLong(1)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521703982, 2),
+				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:02:40.057Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:02:40.916Z"),
+			"optimeDate" : ISODate("2018-03-22T07:33:02Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:33:02Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:33:03.133Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:33:04.668Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 1",
-			"configVersion" : -1
+			"syncingTo" : "node1.mongodb.local:27017",
+			"configVersion" : 1
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521703984, 1),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521703984, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
-Do 2. Mär 12:02:41 CET 2017
+Do 22. Mär 08:33:05 CET 2018
 [32mQuerying(B[m
-trueInsert successful: 6Count: trueInsert successful: 6Count: Do 2. Mär 12:02:41 CET 2017
-Do 2. Mär 12:02:41 CET 2017
+trueInsert successful: 45Count: trueInsert successful: 45Count: Do 22. Mär 08:33:05 CET 2018
+Do 22. Mär 08:33:05 CET 2018
 [32mQuerying(B[m
-trueInsert successful: 9Count: trueInsert successful: 9Count: [32mRemove node 1 (B[m
+trueInsert successful: 47Count: trueInsert successful: 47Count: [32mRemove node 1 (B[m
 Going to remove mongodbreplicaissue_mongodb1_1
-Do 2. Mär 12:02:42 CET 2017
+Do 22. Mär 08:33:09 CET 2018
 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:03:43.596Z"),
-	"myState" : 2,
-	"term" : NumberLong(4),
+	"date" : ISODate("2018-03-22T07:34:11.741Z"),
+	"myState" : 1,
+	"term" : NumberLong(1),
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452561, 4),
+			"ts" : Timestamp(1521704042, 1),
+			"t" : NumberLong(1)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521704042, 1),
 			"t" : NumberLong(1)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452561, 4),
+			"ts" : Timestamp(1521704042, 1),
 			"t" : NumberLong(1)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452561, 4),
+			"ts" : Timestamp(1521704042, 1),
 			"t" : NumberLong(1)
 		}
 	},
@@ -346,15 +396,16 @@ MongoDB server version: 3.4.2
 			"_id" : 0,
 			"name" : "node0.mongodb.local:27017",
 			"health" : 1,
-			"state" : 2,
-			"stateStr" : "SECONDARY",
-			"uptime" : 220,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 243,
 			"optime" : {
-				"ts" : Timestamp(1488452561, 4),
+				"ts" : Timestamp(1521704042, 1),
 				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:02:41Z"),
-			"infoMessage" : "could not find member to sync from",
+			"optimeDate" : ISODate("2018-03-22T07:34:02Z"),
+			"electionTime" : Timestamp(1521703829, 1),
+			"electionDate" : ISODate("2018-03-22T07:30:29Z"),
 			"configVersion" : 1,
 			"self" : true
 		},
@@ -375,64 +426,76 @@ MongoDB server version: 3.4.2
 			},
 			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
 			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:03:42.111Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:02:39.924Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:34:10.048Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:33:06.774Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 0",
+			"lastHeartbeatMessage" : "HostUnreachable",
 			"configVersion" : -1
 		},
 		{
 			"_id" : 2,
 			"name" : "node2.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 125,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704042, 1),
+				"t" : NumberLong(1)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704042, 1),
+				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:03:42.153Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:03:42.240Z"),
+			"optimeDate" : ISODate("2018-03-22T07:34:02Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:34:02Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:34:10.087Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:34:11.296Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 0",
-			"configVersion" : -1
+			"syncingTo" : "node0.mongodb.local:27017",
+			"configVersion" : 1
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521704042, 1),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521704042, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
-Do 2. Mär 12:03:43 CET 2017
+Do 22. Mär 08:34:11 CET 2018
 [32mQuerying(B[m
-[32mAdd node 1 (B[m
-Do 2. Mär 12:03:45 CET 2017
-59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 
-MongoDB shell version v3.4.2
+trueInsert successful: 66Count: [32mAdd node 1 (B[m
+Do 22. Mär 08:34:14 CET 2018
+59 trueInsert successful: 68Count: 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:04:45.862Z"),
-	"myState" : 2,
-	"term" : NumberLong(8),
+	"date" : ISODate("2018-03-22T07:35:16.466Z"),
+	"myState" : 1,
+	"term" : NumberLong(1),
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452561, 4),
+			"ts" : Timestamp(1521704109, 4),
+			"t" : NumberLong(1)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521704109, 4),
 			"t" : NumberLong(1)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452561, 4),
+			"ts" : Timestamp(1521704109, 4),
 			"t" : NumberLong(1)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452561, 4),
+			"ts" : Timestamp(1521704109, 4),
 			"t" : NumberLong(1)
 		}
 	},
@@ -441,98 +504,111 @@ MongoDB server version: 3.4.2
 			"_id" : 0,
 			"name" : "node0.mongodb.local:27017",
 			"health" : 1,
-			"state" : 2,
-			"stateStr" : "SECONDARY",
-			"uptime" : 282,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 308,
 			"optime" : {
-				"ts" : Timestamp(1488452561, 4),
+				"ts" : Timestamp(1521704109, 4),
 				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:02:41Z"),
-			"infoMessage" : "could not find member to sync from",
+			"optimeDate" : ISODate("2018-03-22T07:35:09Z"),
+			"electionTime" : Timestamp(1521703829, 1),
+			"electionDate" : ISODate("2018-03-22T07:30:29Z"),
 			"configVersion" : 1,
 			"self" : true
 		},
 		{
 			"_id" : 1,
 			"name" : "node1.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 59,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704109, 4),
+				"t" : NumberLong(1)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704109, 4),
+				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:04:42.132Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:04:43.635Z"),
+			"optimeDate" : ISODate("2018-03-22T07:35:09Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:35:09Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:35:15.121Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:35:15.942Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 0",
-			"configVersion" : -1
+			"syncingTo" : "node2.mongodb.local:27017",
+			"configVersion" : 1
 		},
 		{
 			"_id" : 2,
 			"name" : "node2.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 190,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704109, 4),
+				"t" : NumberLong(1)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704109, 4),
+				"t" : NumberLong(1)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:04:42.176Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:04:43.701Z"),
+			"optimeDate" : ISODate("2018-03-22T07:35:09Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:35:09Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:35:16.123Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:35:15.331Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 0",
-			"configVersion" : -1
+			"syncingTo" : "node0.mongodb.local:27017",
+			"configVersion" : 1
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521704109, 4),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521704109, 4),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
-Do 2. Mär 12:04:45 CET 2017
+Do 22. Mär 08:35:16 CET 2018
 [32mQuerying(B[m
-Do 2. Mär 12:04:45 CET 2017
-Do 2. Mär 12:04:45 CET 2017
+trueInsert successful: 72Count: trueInsert successful: 72Count: Do 22. Mär 08:35:16 CET 2018
+Do 22. Mär 08:35:16 CET 2018
 [32mQuerying(B[m
-[32mRemove node 0 (B[m
+trueInsert successful: 72Count: trueInsert successful: 73Count: [32mRemove node 0 (B[m
 Going to remove mongodbreplicaissue_mongodb0_1
-Do 2. Mär 12:04:48 CET 2017
+Do 22. Mär 08:35:20 CET 2018
 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:05:49.661Z"),
-	"myState" : 2,
-	"term" : NumberLong(11),
+	"date" : ISODate("2018-03-22T07:36:23.044Z"),
+	"myState" : 1,
+	"term" : NumberLong(2),
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452561, 3),
-			"t" : NumberLong(1)
+			"ts" : Timestamp(1521704179, 1),
+			"t" : NumberLong(2)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521704179, 1),
+			"t" : NumberLong(2)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452673, 2),
-			"t" : NumberLong(8)
+			"ts" : Timestamp(1521704179, 1),
+			"t" : NumberLong(2)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452673, 2),
-			"t" : NumberLong(8)
+			"ts" : Timestamp(1521704179, 1),
+			"t" : NumberLong(2)
 		}
 	},
 	"members" : [
@@ -553,175 +629,203 @@ MongoDB server version: 3.4.2
 			},
 			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
 			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:05:48.808Z"),
-			"lastHeartbeatRecv" : ISODate("1970-01-01T00:00:00Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:36:22.295Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:35:18.123Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 2",
+			"lastHeartbeatMessage" : "HostUnreachable",
 			"configVersion" : -1
 		},
 		{
 			"_id" : 1,
 			"name" : "node1.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 125,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704179, 1),
+				"t" : NumberLong(2)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704179, 1),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:05:48.729Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:05:49.433Z"),
+			"optimeDate" : ISODate("2018-03-22T07:36:19Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:36:19Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:36:22.013Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:36:22.610Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 2",
-			"configVersion" : -1
+			"syncingTo" : "node2.mongodb.local:27017",
+			"configVersion" : 1
 		},
 		{
 			"_id" : 2,
 			"name" : "node2.mongodb.local:27017",
 			"health" : 1,
-			"state" : 2,
-			"stateStr" : "SECONDARY",
-			"uptime" : 249,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 260,
 			"optime" : {
-				"ts" : Timestamp(1488452673, 2),
-				"t" : NumberLong(8)
+				"ts" : Timestamp(1521704179, 1),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:04:33Z"),
+			"optimeDate" : ISODate("2018-03-22T07:36:19Z"),
 			"infoMessage" : "could not find member to sync from",
+			"electionTime" : Timestamp(1521704127, 1),
+			"electionDate" : ISODate("2018-03-22T07:35:27Z"),
 			"configVersion" : 1,
 			"self" : true
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521704179, 1),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521704179, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
-Do 2. Mär 12:05:49 CET 2017
+Do 22. Mär 08:36:23 CET 2018
 [32mQuerying(B[m
-[32mAdd node 0 (B[m
-Do 2. Mär 12:05:51 CET 2017
+trueInsert successful: 76Count: trueInsert successful: 76Count: [32mAdd node 0 (B[m
+Do 22. Mär 08:36:38 CET 2018
 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:06:51.832Z"),
-	"myState" : 2,
-	"term" : NumberLong(15),
+	"date" : ISODate("2018-03-22T07:37:40.839Z"),
+	"myState" : 1,
+	"term" : NumberLong(2),
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452561, 3),
-			"t" : NumberLong(1)
+			"ts" : Timestamp(1521704259, 1),
+			"t" : NumberLong(2)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521704259, 1),
+			"t" : NumberLong(2)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452673, 2),
-			"t" : NumberLong(8)
+			"ts" : Timestamp(1521704259, 1),
+			"t" : NumberLong(2)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452673, 2),
-			"t" : NumberLong(8)
+			"ts" : Timestamp(1521704259, 1),
+			"t" : NumberLong(2)
 		}
 	},
 	"members" : [
 		{
 			"_id" : 0,
 			"name" : "node0.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 59,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704249, 1),
+				"t" : NumberLong(2)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704249, 1),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:06:48.830Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:06:48.521Z"),
+			"optimeDate" : ISODate("2018-03-22T07:37:29Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:37:29Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:37:39.439Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:37:40.315Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 2",
-			"configVersion" : -1
+			"syncingTo" : "node2.mongodb.local:27017",
+			"configVersion" : 1
 		},
 		{
 			"_id" : 1,
 			"name" : "node1.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 203,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704259, 1),
+				"t" : NumberLong(2)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704259, 1),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:06:48.749Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:06:51.780Z"),
+			"optimeDate" : ISODate("2018-03-22T07:37:39Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:37:39Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:37:40.058Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:37:40.653Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 2",
-			"configVersion" : -1
+			"syncingTo" : "node2.mongodb.local:27017",
+			"configVersion" : 1
 		},
 		{
 			"_id" : 2,
 			"name" : "node2.mongodb.local:27017",
 			"health" : 1,
-			"state" : 2,
-			"stateStr" : "SECONDARY",
-			"uptime" : 311,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 337,
 			"optime" : {
-				"ts" : Timestamp(1488452673, 2),
-				"t" : NumberLong(8)
+				"ts" : Timestamp(1521704259, 1),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:04:33Z"),
-			"infoMessage" : "could not find member to sync from",
+			"optimeDate" : ISODate("2018-03-22T07:37:39Z"),
+			"electionTime" : Timestamp(1521704127, 1),
+			"electionDate" : ISODate("2018-03-22T07:35:27Z"),
 			"configVersion" : 1,
 			"self" : true
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521704259, 1),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521704259, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
-Do 2. Mär 12:06:51 CET 2017
+Do 22. Mär 08:37:40 CET 2018
 [32mQuerying(B[m
-trueInsert successful: trueInsert successful: Do 2. Mär 12:06:51 CET 2017
+trueInsert successful: 78Count: trueInsert successful: 78Count: Do 22. Mär 08:37:40 CET 2018
 [32mCluster status by node 0(B[m
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:06:52.477Z"),
+	"date" : ISODate("2018-03-22T07:37:42.984Z"),
 	"myState" : 2,
-	"term" : NumberLong(14),
+	"term" : NumberLong(2),
+	"syncingTo" : "node2.mongodb.local:27017",
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452779, 1),
-			"t" : NumberLong(13)
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452798, 2),
-			"t" : NumberLong(14)
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452798, 2),
-			"t" : NumberLong(14)
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
 		}
 	},
 	"members" : [
@@ -731,13 +835,13 @@ MongoDB server version: 3.4.2
 			"health" : 1,
 			"state" : 2,
 			"stateStr" : "SECONDARY",
-			"uptime" : 61,
+			"uptime" : 64,
 			"optime" : {
-				"ts" : Timestamp(1488452798, 2),
-				"t" : NumberLong(14)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:06:38Z"),
-			"infoMessage" : "could not find member to sync from",
+			"optimeDate" : ISODate("2018-03-22T07:37:40Z"),
+			"syncingTo" : "node2.mongodb.local:27017",
 			"configVersion" : 1,
 			"self" : true
 		},
@@ -747,235 +851,429 @@ MongoDB server version: 3.4.2
 			"health" : 1,
 			"state" : 2,
 			"stateStr" : "SECONDARY",
-			"uptime" : 3,
+			"uptime" : 62,
 			"optime" : {
-				"ts" : Timestamp(1488452779, 1),
-				"t" : NumberLong(13)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(1488452779, 1),
-				"t" : NumberLong(13)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:06:19Z"),
-			"optimeDurableDate" : ISODate("2017-03-02T11:06:19Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:06:48.521Z"),
-			"lastHeartbeatRecv" : ISODate("1970-01-01T00:00:00Z"),
+			"optimeDate" : ISODate("2018-03-22T07:37:40Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:37:40Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:37:42.316Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:37:40.988Z"),
 			"pingMs" : NumberLong(0),
+			"syncingTo" : "node2.mongodb.local:27017",
 			"configVersion" : 1
 		},
 		{
 			"_id" : 2,
 			"name" : "node2.mongodb.local:27017",
 			"health" : 1,
-			"state" : 2,
-			"stateStr" : "SECONDARY",
-			"uptime" : 3,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 62,
 			"optime" : {
-				"ts" : Timestamp(1488452673, 2),
-				"t" : NumberLong(8)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(1488452673, 2),
-				"t" : NumberLong(8)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:04:33Z"),
-			"optimeDurableDate" : ISODate("2017-03-02T11:04:33Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:06:48.521Z"),
-			"lastHeartbeatRecv" : ISODate("1970-01-01T00:00:00Z"),
+			"optimeDate" : ISODate("2018-03-22T07:37:40Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:37:40Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:37:42.315Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:37:41.440Z"),
 			"pingMs" : NumberLong(0),
+			"electionTime" : Timestamp(1521704127, 1),
+			"electionDate" : ISODate("2018-03-22T07:35:27Z"),
 			"configVersion" : 1
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521704260, 2),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521704260, 2),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
 [32mCluster status by node 1(B[m
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:06:53.108Z"),
-	"myState" : 1,
-	"term" : NumberLong(15),
+	"date" : ISODate("2018-03-22T07:37:45.138Z"),
+	"myState" : 2,
+	"term" : NumberLong(2),
+	"syncingTo" : "node2.mongodb.local:27017",
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452779, 1),
-			"t" : NumberLong(13)
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452811, 2),
-			"t" : NumberLong(15)
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452811, 2),
-			"t" : NumberLong(15)
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
 		}
 	},
 	"members" : [
 		{
 			"_id" : 0,
 			"name" : "node0.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 64,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:06:51.781Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:06:48.521Z"),
+			"optimeDate" : ISODate("2018-03-22T07:37:40Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:37:40Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:37:44.990Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:37:44.316Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 1",
-			"configVersion" : -1
+			"syncingTo" : "node2.mongodb.local:27017",
+			"configVersion" : 1
 		},
 		{
 			"_id" : 1,
 			"name" : "node1.mongodb.local:27017",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 211,
+			"optime" : {
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
+			},
+			"optimeDate" : ISODate("2018-03-22T07:37:40Z"),
+			"syncingTo" : "node2.mongodb.local:27017",
+			"configVersion" : 1,
+			"self" : true
+		},
+		{
+			"_id" : 2,
+			"name" : "node2.mongodb.local:27017",
 			"health" : 1,
 			"state" : 1,
 			"stateStr" : "PRIMARY",
-			"uptime" : 188,
+			"uptime" : 209,
 			"optime" : {
-				"ts" : Timestamp(1488452811, 2),
-				"t" : NumberLong(15)
-			},
-			"optimeDate" : ISODate("2017-03-02T11:06:51Z"),
-			"infoMessage" : "could not find member to sync from",
-			"electionTime" : Timestamp(1488452809, 1),
-			"electionDate" : ISODate("2017-03-02T11:06:49Z"),
-			"configVersion" : 1,
-			"self" : true
-		},
-		{
-			"_id" : 2,
-			"name" : "node2.mongodb.local:27017",
-			"health" : 1,
-			"state" : 2,
-			"stateStr" : "SECONDARY",
-			"uptime" : 24,
-			"optime" : {
-				"ts" : Timestamp(1488452673, 2),
-				"t" : NumberLong(8)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(1488452673, 2),
-				"t" : NumberLong(8)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:04:33Z"),
-			"optimeDurableDate" : ISODate("2017-03-02T11:04:33Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:06:51.780Z"),
-			"lastHeartbeatRecv" : ISODate("1970-01-01T00:00:00Z"),
+			"optimeDate" : ISODate("2018-03-22T07:37:40Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:37:40Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:37:44.654Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:37:44.059Z"),
 			"pingMs" : NumberLong(0),
+			"electionTime" : Timestamp(1521704127, 1),
+			"electionDate" : ISODate("2018-03-22T07:35:27Z"),
 			"configVersion" : 1
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521704260, 2),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521704260, 2),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
 [32mCluster status by node 2(B[m
-MongoDB shell version v3.4.2
+MongoDB shell version v3.6.3
 connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.2
+MongoDB server version: 3.6.3
 {
 	"set" : "cluster",
-	"date" : ISODate("2017-03-02T11:06:53.745Z"),
-	"myState" : 2,
-	"term" : NumberLong(15),
+	"date" : ISODate("2018-03-22T07:37:47.696Z"),
+	"myState" : 1,
+	"term" : NumberLong(2),
 	"heartbeatIntervalMillis" : NumberLong(2000),
 	"optimes" : {
 		"lastCommittedOpTime" : {
-			"ts" : Timestamp(1488452561, 3),
-			"t" : NumberLong(1)
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
 		},
 		"appliedOpTime" : {
-			"ts" : Timestamp(1488452673, 2),
-			"t" : NumberLong(8)
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
 		},
 		"durableOpTime" : {
-			"ts" : Timestamp(1488452673, 2),
-			"t" : NumberLong(8)
+			"ts" : Timestamp(1521704260, 2),
+			"t" : NumberLong(2)
 		}
 	},
 	"members" : [
 		{
 			"_id" : 0,
 			"name" : "node0.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 66,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:06:48.830Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:06:53.735Z"),
+			"optimeDate" : ISODate("2018-03-22T07:37:40Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:37:40Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:37:47.443Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:37:46.317Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 2",
-			"configVersion" : -1
+			"syncingTo" : "node2.mongodb.local:27017",
+			"configVersion" : 1
 		},
 		{
 			"_id" : 1,
 			"name" : "node1.mongodb.local:27017",
-			"health" : 0,
-			"state" : 8,
-			"stateStr" : "(not reachable/healthy)",
-			"uptime" : 0,
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 210,
 			"optime" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
 			"optimeDurable" : {
-				"ts" : Timestamp(0, 0),
-				"t" : NumberLong(-1)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
-			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
-			"lastHeartbeat" : ISODate("2017-03-02T11:06:48.749Z"),
-			"lastHeartbeatRecv" : ISODate("2017-03-02T11:06:51.780Z"),
+			"optimeDate" : ISODate("2018-03-22T07:37:40Z"),
+			"optimeDurableDate" : ISODate("2018-03-22T07:37:40Z"),
+			"lastHeartbeat" : ISODate("2018-03-22T07:37:46.060Z"),
+			"lastHeartbeatRecv" : ISODate("2018-03-22T07:37:46.655Z"),
 			"pingMs" : NumberLong(0),
-			"lastHeartbeatMessage" : "Received heartbeat from member with the same member ID as ourself: 2",
-			"configVersion" : -1
+			"syncingTo" : "node2.mongodb.local:27017",
+			"configVersion" : 1
 		},
 		{
 			"_id" : 2,
 			"name" : "node2.mongodb.local:27017",
 			"health" : 1,
-			"state" : 2,
-			"stateStr" : "SECONDARY",
-			"uptime" : 313,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 344,
 			"optime" : {
-				"ts" : Timestamp(1488452673, 2),
-				"t" : NumberLong(8)
+				"ts" : Timestamp(1521704260, 2),
+				"t" : NumberLong(2)
 			},
-			"optimeDate" : ISODate("2017-03-02T11:04:33Z"),
-			"infoMessage" : "could not find member to sync from",
+			"optimeDate" : ISODate("2018-03-22T07:37:40Z"),
+			"electionTime" : Timestamp(1521704127, 1),
+			"electionDate" : ISODate("2018-03-22T07:35:27Z"),
 			"configVersion" : 1,
 			"self" : true
 		}
 	],
-	"ok" : 1
+	"ok" : 1,
+	"operationTime" : Timestamp(1521704260, 2),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1521704260, 2),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
 }
 bye
-Do 2. Mär 12:06:53 CET 2017
+Do 22. Mär 08:37:47 CET 2018
 [32mQuerying(B[m
-trueInsert successful: trueInsert successful: Do 2. Mär 12:06:53 CET 2017
+trueInsert successful: 78Count: trueInsert successful: 78Count: Do 22. Mär 08:37:47 CET 2018
 [32mQuerying(B[m
-trueInsert successful: trueInsert successful: Do 2. Mär 12:06:54 CET 2017
+trueInsert successful: 80Count: trueInsert successful: 80Count: Do 22. Mär 08:37:47 CET 2018
 [32mQuerying(B[m
-trueInsert successful: trueInsert successful: 
+trueInsert successful: 82Count: trueInsert successful: 82Count: [32mStarting after test queries every 5s.(B[m
+Do 22. Mär 08:37:47 CET 2018
+895 Do 22. Mär 08:37:47 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 84Count: trueInsert successful: 84Count: Do 22. Mär 08:37:52 CET 2018
+890 Do 22. Mär 08:37:52 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 86Count: trueInsert successful: 86Count: Do 22. Mär 08:37:57 CET 2018
+885 Do 22. Mär 08:37:57 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 88Count: trueInsert successful: 88Count: Do 22. Mär 08:38:02 CET 2018
+880 Do 22. Mär 08:38:02 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 90Count: trueInsert successful: 90Count: Do 22. Mär 08:38:07 CET 2018
+875 Do 22. Mär 08:38:07 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 92Count: trueInsert successful: 92Count: Do 22. Mär 08:38:12 CET 2018
+870 Do 22. Mär 08:38:12 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 94Count: trueInsert successful: 94Count: Do 22. Mär 08:38:17 CET 2018
+865 Do 22. Mär 08:38:17 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 96Count: trueInsert successful: 96Count: Do 22. Mär 08:38:22 CET 2018
+860 Do 22. Mär 08:38:22 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 98Count: trueInsert successful: 98Count: Do 22. Mär 08:38:27 CET 2018
+855 Do 22. Mär 08:38:27 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 100Count: trueInsert successful: 100Count: Do 22. Mär 08:38:32 CET 2018
+850 Do 22. Mär 08:38:32 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 104Count: trueInsert successful: 104Count: Do 22. Mär 08:38:38 CET 2018
+845 Do 22. Mär 08:38:38 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 105Count: trueInsert successful: 105Count: Do 22. Mär 08:38:43 CET 2018
+840 Do 22. Mär 08:38:43 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 106Count: trueInsert successful: 106Count: Do 22. Mär 08:38:48 CET 2018
+835 Do 22. Mär 08:38:48 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 110Count: trueInsert successful: 110Count: Do 22. Mär 08:38:53 CET 2018
+830 Do 22. Mär 08:38:53 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 112Count: trueInsert successful: 112Count: Do 22. Mär 08:38:58 CET 2018
+825 Do 22. Mär 08:38:58 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 112Count: trueInsert successful: 112Count: Do 22. Mär 08:39:03 CET 2018
+820 Do 22. Mär 08:39:03 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 114Count: trueInsert successful: 114Count: Do 22. Mär 08:39:08 CET 2018
+815 Do 22. Mär 08:39:08 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 116Count: trueInsert successful: 116Count: Do 22. Mär 08:39:13 CET 2018
+810 Do 22. Mär 08:39:13 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 118Count: trueInsert successful: 118Count: Do 22. Mär 08:39:18 CET 2018
+805 Do 22. Mär 08:39:18 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 120Count: trueInsert successful: 120Count: Do 22. Mär 08:39:23 CET 2018
+800 Do 22. Mär 08:39:23 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 122Count: trueInsert successful: 122Count: Do 22. Mär 08:39:28 CET 2018
+795 Do 22. Mär 08:39:28 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 124Count: trueInsert successful: 124Count: Do 22. Mär 08:39:33 CET 2018
+790 Do 22. Mär 08:39:33 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 126Count: trueInsert successful: 126Count: Do 22. Mär 08:39:38 CET 2018
+785 Do 22. Mär 08:39:38 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 130Count: trueInsert successful: 130Count: Do 22. Mär 08:39:43 CET 2018
+780 Do 22. Mär 08:39:43 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 130Count: trueInsert successful: 130Count: Do 22. Mär 08:39:48 CET 2018
+775 Do 22. Mär 08:39:48 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 132Count: trueInsert successful: 132Count: Do 22. Mär 08:39:53 CET 2018
+770 Do 22. Mär 08:39:53 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 134Count: trueInsert successful: 134Count: Do 22. Mär 08:39:58 CET 2018
+765 Do 22. Mär 08:39:58 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 138Count: trueInsert successful: 138Count: Do 22. Mär 08:40:03 CET 2018
+760 Do 22. Mär 08:40:03 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 138Count: trueInsert successful: 138Count: Do 22. Mär 08:40:08 CET 2018
+755 Do 22. Mär 08:40:08 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 140Count: trueInsert successful: 140Count: Do 22. Mär 08:40:13 CET 2018
+750 Do 22. Mär 08:40:13 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 142Count: trueInsert successful: 142Count: Do 22. Mär 08:40:18 CET 2018
+745 Do 22. Mär 08:40:18 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 144Count: trueInsert successful: 144Count: Do 22. Mär 08:40:23 CET 2018
+740 Do 22. Mär 08:40:23 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 148Count: trueInsert successful: 148Count: Do 22. Mär 08:40:28 CET 2018
+735 Do 22. Mär 08:40:28 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 150Count: trueInsert successful: 150Count: Do 22. Mär 08:40:33 CET 2018
+730 Do 22. Mär 08:40:33 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 152Count: trueInsert successful: 152Count: Do 22. Mär 08:40:38 CET 2018
+725 Do 22. Mär 08:40:38 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 154Count: trueInsert successful: 154Count: Do 22. Mär 08:40:43 CET 2018
+720 Do 22. Mär 08:40:43 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 154Count: trueInsert successful: 154Count: Do 22. Mär 08:40:48 CET 2018
+715 Do 22. Mär 08:40:48 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 156Count: trueInsert successful: 156Count: Do 22. Mär 08:40:53 CET 2018
+710 Do 22. Mär 08:40:53 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 160Count: trueInsert successful: 160Count: Do 22. Mär 08:40:58 CET 2018
+705 Do 22. Mär 08:40:58 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 160Count: trueInsert successful: 160Count: Do 22. Mär 08:41:03 CET 2018
+700 Do 22. Mär 08:41:03 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 163Count: trueInsert successful: 163Count: Do 22. Mär 08:41:08 CET 2018
+695 Do 22. Mär 08:41:08 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 164Count: trueInsert successful: 164Count: Do 22. Mär 08:41:13 CET 2018
+690 Do 22. Mär 08:41:13 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 166Count: trueInsert successful: 166Count: Do 22. Mär 08:41:18 CET 2018
+685 Do 22. Mär 08:41:18 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 168Count: trueInsert successful: 168Count: Do 22. Mär 08:41:23 CET 2018
+680 Do 22. Mär 08:41:23 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 170Count: trueInsert successful: 170Count: Do 22. Mär 08:41:28 CET 2018
+675 Do 22. Mär 08:41:28 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 172Count: trueInsert successful: 172Count: Do 22. Mär 08:41:33 CET 2018
+670 Do 22. Mär 08:41:33 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 176Count: trueInsert successful: 176Count: Do 22. Mär 08:41:38 CET 2018
+665 Do 22. Mär 08:41:38 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 176Count: trueInsert successful: 176Count: Do 22. Mär 08:41:43 CET 2018
+660 Do 22. Mär 08:41:43 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 178Count: trueInsert successful: 180Count: Do 22. Mär 08:41:48 CET 2018
+655 Do 22. Mär 08:41:48 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 180Count: trueInsert successful: 180Count: Do 22. Mär 08:41:53 CET 2018
+650 Do 22. Mär 08:41:53 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 184Count: trueInsert successful: 184Count: Do 22. Mär 08:41:58 CET 2018
+645 Do 22. Mär 08:41:58 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 188Count: trueInsert successful: 188Count: Do 22. Mär 08:42:03 CET 2018
+640 Do 22. Mär 08:42:03 CET 2018
+[32mQuerying(B[m
+trueInsert successful: 190Count: trueInsert successful: 190Count: 
