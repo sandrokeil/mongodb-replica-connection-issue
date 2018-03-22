@@ -7,14 +7,16 @@ require 'vendor/autoload.php';
 
 try {
     $clientPrimaryPreferred = new \MongoDB\Client(
-        'mongodb://node0.mongodb.local:27017,node1.mongodb.local:27017,node2.mongodb.local:27017?replicaSet=cluster&connectTimeoutMS=2000&readPreference=primaryPreferred&serverSelectionTryOnce=false',
+        'mongodb://node0.mongodb.local:27017,node1.mongodb.local:27017,node2.mongodb.local:27017/'.
+        '?replicaSet=cluster&readPreference=primaryPreferred',
         [],
         //force usage of assoc instead of stdClass objects when returning data from mongodb
         ['typeMap' => ['root' => 'array', 'document' => 'array', 'array' => 'array']]
     );
 
     $clientSecondaryPreferred = new \MongoDB\Client(
-        'mongodb://node0.mongodb.local:27017,node1.mongodb.local:27017,node2.mongodb.local:27017?replicaSet=cluster&connectTimeoutMS=2000&readPreference=secondaryPreferred&serverSelectionTryOnce=false',
+        'mongodb://node0.mongodb.local:27017,node1.mongodb.local:27017,node2.mongodb.local:27017/' .
+        '?replicaSet=cluster&readPreference=secondaryPreferred',
         [],
         //force usage of assoc instead of stdClass objects when returning data from mongodb
         ['typeMap' => ['root' => 'array', 'document' => 'array', 'array' => 'array']]

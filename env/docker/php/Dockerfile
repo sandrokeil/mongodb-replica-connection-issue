@@ -1,6 +1,6 @@
-FROM php:7.1.2-fpm-alpine
+FROM php:7.2.3-fpm-alpine3.7
 
-ENV PHP_MONGO_VERSION 1.2.5
+ENV PHP_MONGO_VERSION 1.4.2
 
 # persistent / runtime deps
 ENV PHPIZE_DEPS \

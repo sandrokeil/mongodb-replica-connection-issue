@@ -4,7 +4,6 @@ services:
     image: prooph/nginx:www
     ports:
       - 8080:80
-      - 443:443
 
   php:
     build: ./env/docker/php
